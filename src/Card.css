@@ -1,0 +1,16 @@
+.Card {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(83, 177, 83);
+  margin: 20px;
+  padding: 0 20px;
+  width: 225px;
+  flex-wrap: wrap;
+}
+.top-card,
+.bottom-card {
+  display: flex;
+  flex-direction: row;
+  height: 50%;
+  justify-content: space-between;
+}
