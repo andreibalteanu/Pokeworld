@@ -1,7 +1,7 @@
 .App {
   height: 100vh;
   padding: 0 15%;
-  background-color: antiquewhite;
+  background-color: rgb(250, 242, 232);
   overflow: auto;
 }
 .container-of-cards {
