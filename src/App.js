@@ -8,7 +8,7 @@ function App() {
       <h1>Pokedex</h1>
       <input
         placeholder="Search pokemon name, number or type..."
-        class="searchBar"
+        className="searchBar"
       ></input>
       <div className="container-of-cards">
         {PokemonData.map((pokemon) => {
