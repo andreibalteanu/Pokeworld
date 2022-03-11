@@ -1,4 +1,5 @@
 import "./Card.css";
+import "./Colors.css";
 
 function Card({ name, id, types, image }) {
   function CorrectId(number) {
