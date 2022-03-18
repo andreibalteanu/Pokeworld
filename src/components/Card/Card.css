@@ -1,20 +1,20 @@
-.Card {
+.card {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  flex-wrap: wrap;
+  height: fit-content;
   margin: 20px;
   padding: 0 20px;
   width: 225px;
-  flex-wrap: wrap;
   border-radius: 20px;
-  height: fit-content;
+  background-color: white;
 }
 .top-card,
 .bottom-card {
   display: flex;
   flex-direction: row;
-  height: 50%;
   justify-content: space-between;
+  height: 50%;
 }
 .card-image {
   width: 130px;
@@ -27,6 +27,5 @@
 .type {
   border-radius: 10px;
   padding: 5px 10px;
-  width: auto;
   width: fit-content;
 }

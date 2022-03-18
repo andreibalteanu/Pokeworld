@@ -1,0 +1,37 @@
+.card-profile {
+  width: 50%;
+  margin: 20px;
+  border: solid black 1px;
+  border-radius: 20px;
+  padding-bottom: 20px;
+}
+.top-profile,
+.middle-profile,
+.bottom-profile,
+.type-list-profile {
+  display: flex;
+}
+.top-profile {
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+}
+.middle-profile {
+  justify-content: center;
+  margin: 0 20px;
+}
+.bottom-profile {
+  justify-content: space-evenly;
+  margin: 0 20px;
+}
+.type-list-profile {
+  width: 30%;
+  justify-content: flex-end;
+}
+.type-profile {
+  margin: 10px;
+}
+.image-profile {
+  width: 400px;
+  height: 400px;
+}

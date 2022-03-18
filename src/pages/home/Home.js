@@ -1,9 +1,9 @@
 import { useState } from "react";
-import "./App.css";
-import Card from "./Card.js";
-import PokemonData from "./data.json";
+import "./Home.css";
+import Card from "../../components/Card/Card";
+import PokemonData from "../../data/data.json";
 
-function App() {
+function Home() {
   const [value, setValue] = useState("");
 
   function typeFilter(pokemonTypes) {
@@ -22,13 +22,12 @@ function App() {
     }
   }
   return (
-    <div className="App">
-      <h1>Pokedex</h1>
+    <div className="home">
       <input
         type="text"
         onChange={(e) => setValue(e.target.value)}
         placeholder="Search pokemon name, number or type..."
-        className="searchBar"
+        className="search-bar"
       ></input>
       <div className="container-of-cards">
         {PokemonData.filter(
@@ -53,4 +52,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

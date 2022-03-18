@@ -1,0 +1,4 @@
+.top-pokemon {
+  display: flex;
+  justify-content: space-between;
+}

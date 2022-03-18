@@ -1,0 +1,11 @@
+.search-bar {
+  width: 315px;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 17px;
+}
+.container-of-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}

@@ -22,27 +22,27 @@
 .electric {
   background-color: #f9d030;
 }
-.grasstype {
+.grass-type {
   background-color: #6cb647;
 }
-.poisontype {
+.poison-type {
   background-color: #8a388a;
 }
-.firetype {
+.fire-type {
   background-color: #d8742c;
 }
-.normaltype {
+.normal-type {
   background-color: #909167;
 }
-.watertype {
+.water-type {
   background-color: #6388df;
 }
-.ghosttype {
+.ghost-type {
   background-color: rgb(99, 79, 133);
 }
-.flyingtype {
+.flying-type {
   background-color: #9f89e4;
 }
-.electrictype {
+.electric-type {
   background-color: #e7c22d;
 }
