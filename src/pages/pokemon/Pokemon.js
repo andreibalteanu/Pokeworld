@@ -23,10 +23,11 @@ function Pokemon() {
           types={currentPokemon[0].types}
           image={currentPokemon[0].sprites.other.official_artwork.front_default}
         />
-        <CardDescription />
+        <CardDescription types={currentPokemon[0].types} />
       </div>
       <CardSprites
         key={currentPokemon[0].id}
+        types={currentPokemon[0].types}
         images={currentPokemon[0].sprites}
       />
     </div>

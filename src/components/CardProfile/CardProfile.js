@@ -2,7 +2,7 @@ import "./CardProfile.css";
 
 function CardProfile({ name, id, types, image }) {
   return (
-    <div className="card-profile">
+    <div className={`card-profile ${types[0].type.name}`}>
       <div className="top-profile">
         <div>
           <h2>{name}</h2>
