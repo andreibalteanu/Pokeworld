@@ -4,12 +4,17 @@ import CardProfile from "../../components/CardProfile/CardProfile";
 import CardDescription from "../../components/CardDescription/CardDescription";
 import CardSprites from "../../components/CardSprites/CardSprites";
 import "./Pokemon.css";
+import ErrorPage from "../error-page/ErrorPage";
 
 function Pokemon() {
   const params = useParams();
   var currentPokemon = PokemonData.filter(
     (pokemon) => pokemon.id == params.pokemonId
   );
+  const noPokemon = currentPokemon.length === 0;
+  if (noPokemon) {
+    return <ErrorPage />;
+  }
   return (
     <div className="pokemon">
       <div className="top-pokemon">

@@ -39,7 +39,7 @@ function CardDescription({ types }) {
         </div>
         <div className="bottom-description-evo">
           <p>Ivysaur</p>
-          <p>#003</p>
+          <p>#002</p>
           <img
             alt="Pokemon"
             src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png"
