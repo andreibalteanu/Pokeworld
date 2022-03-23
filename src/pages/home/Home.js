@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Home.css";
 import Card from "../../components/Card/Card";
-import PokemonData from "../../data/data.json";
+import PokemonDataa from "../../data/data.json";
 
 function Home() {
   const [value, setValue] = useState("");
@@ -30,7 +30,7 @@ function Home() {
         className="search-bar"
       ></input>
       <div className="container-of-cards">
-        {PokemonData.filter(
+        {PokemonDataa.filter(
           (pokemon) =>
             pokemon.name.toLowerCase().includes(value) ||
             typeFilter(pokemon.types)
@@ -48,6 +48,7 @@ function Home() {
           );
         })}
       </div>
+      <div>HELLO</div>
     </div>
   );
 }

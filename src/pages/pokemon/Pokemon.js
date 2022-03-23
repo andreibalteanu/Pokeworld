@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import PokemonData from "../../data/data.json";
+import PokemonDataa from "../../data/data.json";
 import CardProfile from "../../components/CardProfile/CardProfile";
 import CardDescription from "../../components/CardDescription/CardDescription";
 import CardSprites from "../../components/CardSprites/CardSprites";
@@ -8,7 +8,7 @@ import ErrorPage from "../error-page/ErrorPage";
 
 function Pokemon() {
   const params = useParams();
-  var currentPokemon = PokemonData.filter(
+  var currentPokemon = PokemonDataa.filter(
     (pokemon) => pokemon.id == params.pokemonId
   );
   const noPokemon = currentPokemon.length === 0;
