@@ -1,11 +1,23 @@
 .grass {
   background-color: #78c84f;
 }
+.bug {
+  background-color: #90f15f;
+}
+.fairy {
+  background-color: #ffb6c1;
+}
+.psychic {
+  background-color: #aa336a;
+}
 .poison {
   background-color: #9f419f;
 }
 .fire {
   background-color: #f08030;
+}
+.fighting {
+  background-color: #bb5e02;
 }
 .normal {
   background-color: #a7a877;
@@ -22,14 +34,32 @@
 .electric {
   background-color: #f9d030;
 }
+.ground {
+  background-color: #fce58d;
+}
+.rock {
+  background-color: #c89d7c;
+}
 .grass-type {
   background-color: #6cb647;
+}
+.bug-type {
+  background-color: #86e059;
+}
+.fairy-type {
+  background-color: #e6a4ae;
+}
+.psychic-type {
+  background-color: #912b5a;
 }
 .poison-type {
   background-color: #8a388a;
 }
 .fire-type {
   background-color: #d8742c;
+}
+.fighting-type {
+  background-color: #9e5001;
 }
 .normal-type {
   background-color: #909167;
@@ -45,4 +75,10 @@
 }
 .electric-type {
   background-color: #e7c22d;
+}
+.ground-type {
+  background-color: #ddcb81;
+}
+.rock-type {
+  background-color: #b68f71;
 }

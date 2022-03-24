@@ -1,16 +1,20 @@
 import { useParams } from "react-router-dom";
-import PokemonData from "../../data/data.json";
 import CardProfile from "../../components/CardProfile/CardProfile";
 import CardDescription from "../../components/CardDescription/CardDescription";
 import CardSprites from "../../components/CardSprites/CardSprites";
 import "./Pokemon.css";
 import ErrorPage from "../error-page/ErrorPage";
+import { useContext } from "react";
+import PokemonData from "../../PokemonData";
 
 function Pokemon() {
   const params = useParams();
-  var currentPokemon = PokemonData.filter(
+  const { pokemonData } = useContext(PokemonData);
+  if (pokemonData.length > 0) console.log(pokemonData[10]);
+  var currentPokemon = pokemonData.filter(
     (pokemon) => pokemon.id == params.pokemonId
   );
+  console.log(currentPokemon);
   const noPokemon = currentPokemon.length === 0;
   if (noPokemon) {
     return <ErrorPage />;
@@ -26,7 +30,11 @@ function Pokemon() {
           }
           id={currentPokemon[0].id}
           types={currentPokemon[0].types}
-          image={currentPokemon[0].sprites.other.official_artwork.front_default}
+          image={
+            currentPokemon[0]["sprites"]["other"]["official-artwork"][
+              "front_default"
+            ]
+          }
         />
         <CardDescription types={currentPokemon[0].types} />
       </div>

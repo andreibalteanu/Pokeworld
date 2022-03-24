@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect, useContext } from "react";
 import "./Home.css";
 import Card from "../../components/Card/Card";
-import PokemonData from "../../data/data.json";
+import PokemonData from "../../PokemonData";
 
 function Home() {
+  const { pokemonData, addMorePokemons } = useContext(PokemonData);
   const [value, setValue] = useState("");
 
   function typeFilter(pokemonTypes) {
@@ -30,24 +31,31 @@ function Home() {
         className="search-bar"
       ></input>
       <div className="container-of-cards">
-        {PokemonData.filter(
-          (pokemon) =>
-            pokemon.name.toLowerCase().includes(value) ||
-            typeFilter(pokemon.types)
-        ).map((pokemon) => {
-          return (
-            <Card
-              key={pokemon.id}
-              name={
-                pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)
-              }
-              id={pokemon.id}
-              types={pokemon.types}
-              image={pokemon.sprites.other.official_artwork.front_default}
-            />
-          );
-        })}
+        {pokemonData
+          .filter(
+            (pokemon) =>
+              pokemon.name.toLowerCase().includes(value) ||
+              typeFilter(pokemon.types)
+          )
+          .map((pokemon) => {
+            return (
+              <Card
+                key={pokemon.id}
+                name={
+                  pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)
+                }
+                id={pokemon.id}
+                types={pokemon.types}
+                image={
+                  pokemon["sprites"]["other"]["official-artwork"][
+                    "front_default"
+                  ]
+                }
+              />
+            );
+          })}
       </div>
+      <button onClick={addMorePokemons}>LOAD MORE POKEMONS</button>
     </div>
   );
 }
