@@ -6,7 +6,6 @@ import PokemonData from "../../PokemonData";
 function Home() {
   const { pokemonData, addMorePokemons } = useContext(PokemonData);
   const [value, setValue] = useState("");
-
   function typeFilter(pokemonTypes) {
     if (
       pokemonTypes.length === 1 &&
@@ -55,7 +54,9 @@ function Home() {
             );
           })}
       </div>
-      <button onClick={addMorePokemons}>LOAD MORE POKEMONS</button>
+      <button className="addMorePokemons" onClick={addMorePokemons}>
+        LOAD MORE POKEMONS
+      </button>
     </div>
   );
 }

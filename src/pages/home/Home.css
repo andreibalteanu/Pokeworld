@@ -9,3 +9,8 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+.addMorePokemons {
+  height: 30px;
+  width: 200px;
+  margin-bottom: 20px;
+}

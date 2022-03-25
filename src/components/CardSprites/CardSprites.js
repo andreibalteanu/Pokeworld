@@ -3,6 +3,7 @@ import "./CardSprites.css";
 function CardSprites({ images, types }) {
   images = Object.values(images);
   images.pop();
+  images.pop();
   return (
     <div className={`card-sprites ${types[0].type.name}`}>
       <h2>Sprites</h2>

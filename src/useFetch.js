@@ -17,5 +17,5 @@ export const useFetch = (url) => {
       }
     })();
   }, [url]);
-  return data;
+  return { data, isPending };
 };

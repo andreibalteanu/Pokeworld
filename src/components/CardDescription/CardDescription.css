@@ -1,28 +1,28 @@
 .card-description {
   width: 45%;
   margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.middle-description {
+.title-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.dropdown-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.dropdown-games {
+  height: 30px;
+  margin-left: 10px;
+}
+.bottom-description {
   display: flex;
   justify-content: space-between;
   border: solid black 1px;
   border-radius: 20px;
   padding: 0 20px;
-}
-.bottom-description {
-  display: flex;
-  justify-content: space-evenly;
-  border: solid black 1px;
-  border-radius: 20px;
-  margin-top: 20px;
-  padding-bottom: 15px;
-}
-.bottom-description-evo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.bottom-description img {
-  height: 80px;
-  width: 80px;
 }

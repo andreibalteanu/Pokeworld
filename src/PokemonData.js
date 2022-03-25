@@ -7,14 +7,13 @@ export const PokemonDataProvider = ({ children }) => {
   const [url, setUrl] = useState(
     "https://pokeapi.co/api/v2/pokemon?offset=0&limit=21"
   );
-  const data = useFetch(url);
+  const { data, isPending } = useFetch(url);
   const [pokemonData, setPokemonData] = useState([]);
-  var addPlusToUrl, urlReduced, finalUrl;
+
   const addMorePokemons = () => {
-    urlReduced = url.slice(0, -2);
-    addPlusToUrl = parseInt(url.slice(-2)) + 21;
-    finalUrl = urlReduced + addPlusToUrl;
-    setUrl(finalUrl);
+    var offset = url.substring(url.indexOf("=") + 1, url.lastIndexOf("&"));
+    var newOffset = parseInt(offset) + 21;
+    setUrl(url.replace(offset, newOffset));
   };
   useEffect(() => {
     async function fetchPokemons() {
@@ -25,7 +24,7 @@ export const PokemonDataProvider = ({ children }) => {
           return resp.json();
         })
       );
-      setPokemonData(pokemonDataTest);
+      setPokemonData(pokemonData.concat(pokemonDataTest));
     }
     if (data) {
       fetchPokemons();

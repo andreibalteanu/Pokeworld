@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import CardProfile from "../../components/CardProfile/CardProfile";
 import CardDescription from "../../components/CardDescription/CardDescription";
 import CardSprites from "../../components/CardSprites/CardSprites";
+import CardEvolutions from "../../components/CardEvolutions/CardEvolutions";
 import "./Pokemon.css";
 import ErrorPage from "../error-page/ErrorPage";
 import { useContext } from "react";
@@ -10,15 +11,14 @@ import PokemonData from "../../PokemonData";
 function Pokemon() {
   const params = useParams();
   const { pokemonData } = useContext(PokemonData);
-  if (pokemonData.length > 0) console.log(pokemonData[10]);
   var currentPokemon = pokemonData.filter(
     (pokemon) => pokemon.id == params.pokemonId
   );
-  console.log(currentPokemon);
   const noPokemon = currentPokemon.length === 0;
   if (noPokemon) {
     return <ErrorPage />;
   }
+  console.log(currentPokemon[0]);
   return (
     <div className="pokemon">
       <div className="top-pokemon">
@@ -35,9 +35,16 @@ function Pokemon() {
               "front_default"
             ]
           }
+          weight={currentPokemon[0].weight}
+          height={currentPokemon[0].height}
         />
-        <CardDescription types={currentPokemon[0].types} />
+        <CardDescription
+          types={currentPokemon[0].types}
+          stats={currentPokemon[0].stats}
+          games={currentPokemon[0].game_indices}
+        />
       </div>
+      <CardEvolutions types={currentPokemon[0].types} />
       <CardSprites
         key={currentPokemon[0].id}
         types={currentPokemon[0].types}
