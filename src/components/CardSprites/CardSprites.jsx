@@ -1,15 +1,17 @@
+import React from "react";
+
 import "./CardSprites.css";
 
 function CardSprites({ images, types }) {
-  images = Object.values(images);
-  images.pop();
-  images.pop();
+  const newImages = Object.values(images);
+  newImages.pop();
+  newImages.pop();
   return (
     <div className={`card-sprites ${types[0].type.name}`}>
       <h2>Sprites</h2>
       <div className="card-sprites-versions">
-        {images.map((image, index) => {
-          if (image != null)
+        {newImages.map((image, index) => {
+          if (image != null) {
             return (
               <div
                 key={`card-sprites-card${index}`}
@@ -19,6 +21,8 @@ function CardSprites({ images, types }) {
                 <img alt="Pokemon" src={image} />
               </div>
             );
+          }
+          return false;
         })}
       </div>
     </div>

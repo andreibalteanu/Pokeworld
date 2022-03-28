@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   height: fit-content;
   margin: 20px;
-  padding: 0 20px;
+  padding: 10px 10px;
   width: 225px;
 
   border-radius: 20px;
@@ -30,7 +30,8 @@
 }
 
 .type {
+  width: fit-content;
+  margin: 5px;
   border-radius: 10px;
   padding: 5px 10px;
-  width: fit-content;
 }

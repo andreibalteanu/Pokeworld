@@ -1,0 +1,8 @@
+.app-wrapper {
+  width: 70%;
+  height: 70%;
+  overflow: auto;
+  border-radius: 20px;
+  box-shadow: -17px -17px 20px #0004;
+  background-color: rgb(250, 242, 232);
+}

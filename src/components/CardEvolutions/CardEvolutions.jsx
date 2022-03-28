@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./CardEvolutions.css";
 
 export default function CardEvolutions({ types }) {

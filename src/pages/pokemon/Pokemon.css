@@ -1,4 +1,10 @@
+.pokemon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .top-pokemon {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }

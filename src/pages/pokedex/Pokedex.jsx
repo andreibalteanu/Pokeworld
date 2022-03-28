@@ -1,12 +1,17 @@
-import { useState, useEffect, useContext } from "react";
-import "./Home.css";
+import { React, useState, useContext } from "react";
+import { Link } from "react-router-dom";
+
+import { Button, Heading } from "@chakra-ui/react";
+
 import Card from "../../components/Card/Card";
 import PokemonData from "../../PokemonData";
 
-function Home() {
+import "./Pokedex.css";
+
+function Pokedex() {
   const { pokemonData, addMorePokemons } = useContext(PokemonData);
   const [value, setValue] = useState("");
-  function typeFilter(pokemonTypes) {
+  const typeFilter = (pokemonTypes) => {
     if (
       pokemonTypes.length === 1 &&
       pokemonTypes[0].type.name.includes(value)
@@ -20,15 +25,20 @@ function Home() {
     ) {
       return true;
     }
-  }
+    return false;
+  };
   return (
-    <div className="home">
+    <div className="pokedex">
+      <Link to="/pokemon" className="title-page">
+        <Heading>Pokedex</Heading>
+      </Link>
+
       <input
         type="text"
         onChange={(e) => setValue(e.target.value)}
         placeholder="Search pokemon name, number or type..."
         className="search-bar"
-      ></input>
+      />
       <div className="container-of-cards">
         {pokemonData
           .filter(
@@ -36,29 +46,27 @@ function Home() {
               pokemon.name.toLowerCase().includes(value) ||
               typeFilter(pokemon.types)
           )
-          .map((pokemon) => {
-            return (
-              <Card
-                key={pokemon.id}
-                name={
-                  pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)
-                }
-                id={pokemon.id}
-                types={pokemon.types}
-                image={
-                  pokemon["sprites"]["other"]["official-artwork"][
-                    "front_default"
-                  ]
-                }
-              />
-            );
-          })}
+          .map((pokemon) => (
+            <Card
+              key={pokemon.id}
+              name={
+                pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)
+              }
+              id={pokemon.id}
+              types={pokemon.types}
+              image={pokemon.sprites.other["official-artwork"].front_default}
+            />
+          ))}
       </div>
-      <button className="addMorePokemons" onClick={addMorePokemons}>
+      <Button
+        className="addMorePokemons"
+        onClick={addMorePokemons}
+        colorScheme="blue"
+      >
         LOAD MORE POKEMONS
-      </button>
+      </Button>
     </div>
   );
 }
 
-export default Home;
+export default Pokedex;

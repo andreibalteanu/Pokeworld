@@ -13,12 +13,13 @@ code {
 }
 
 .index {
-  overflow: auto;
+  background-image: url("./images/pokemon-app-background.jpeg");
+  background-size: cover;
   height: 100vh;
-  padding: 0 15%;
-  background-color: rgb(250, 242, 232);
 }
 .title-app {
-  text-decoration: none;
-  color: inherit;
+  height: 120px;
+}
+.title-page {
+  margin: 20px 0;
 }

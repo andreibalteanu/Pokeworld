@@ -1,0 +1,21 @@
+.pokedex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.search-bar {
+  width: 315px;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 17px;
+}
+.container-of-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.addMorePokemons {
+  height: 30px;
+  width: 200px;
+  margin-bottom: 20px;
+}
