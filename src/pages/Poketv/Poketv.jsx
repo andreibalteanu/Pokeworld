@@ -1,53 +1,53 @@
+import { Button, Flex, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { Button, Flex, Heading } from "@chakra-ui/react";
-
-import "./Home.css";
-
-function Home() {
+function Poketv() {
   return (
-    <Flex direction="column" align="center" className="home">
-      <Heading className="menu">Menu</Heading>
+    <Flex direction="column" align="center">
+      <Link to="/poketv" className="title-page">
+        <Heading>Poke TV</Heading>
+      </Link>
+      <Text>Series:</Text>
       <Flex
         className="container-of-buttons"
         direction="column"
         align="center"
         justify="space-arounds"
       >
-        <Link to="/pokemon">
+        <Link to="/poketv/indigo-league">
           <Button colorScheme="blue" className="menu-button">
-            POKEDEX
+            Indigo League
           </Button>
         </Link>
-        <Link to="/poketv">
+        <Link to="/poketv/the-johto-journeys">
           <Button colorScheme="blue" className="menu-button">
-            POKETV
+            The Johto Journeys
           </Button>
         </Link>
-        <Link to="/">
+        <Link to="/poketv/advanced">
           <Button colorScheme="blue" className="menu-button">
-            GUESS THE POKEMON
+            Advanced
           </Button>
         </Link>
-        <Link to="/">
+        <Link to="/poketv/diamond-and-pearl">
           <Button colorScheme="blue" className="menu-button">
-            POKEMON 3D VIEWER
+            Diamond and Pearl
           </Button>
         </Link>
-        <Link to="/">
+        <Link to="/poketv/black-and-white">
           <Button colorScheme="blue" className="menu-button">
-            POKEMON SCANNER
+            Black & White
           </Button>
         </Link>
-        <Link to="/">
+        <Link to="/poketv/x-and-y">
           <Button colorScheme="blue" className="menu-button">
-            WALLPAPER GENERATOR
+            X & Y
           </Button>
         </Link>
-        <Link to="/">
+        <Link to="/poketv/sun-and-moon">
           <Button colorScheme="blue" className="menu-button">
-            MEMORY CARD GAME
+            Sun & Moon
           </Button>
         </Link>
       </Flex>
@@ -55,4 +55,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Poketv;

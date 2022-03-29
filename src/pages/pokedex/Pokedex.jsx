@@ -1,5 +1,4 @@
 import { React, useState, useContext } from "react";
-import { Link } from "react-router-dom";
 
 import { Button, Heading } from "@chakra-ui/react";
 
@@ -29,9 +28,7 @@ function Pokedex() {
   };
   return (
     <div className="pokedex">
-      <Link to="/pokemon" className="title-page">
-        <Heading>Pokedex</Heading>
-      </Link>
+      <Heading className="title-page">Pokedex</Heading>
 
       <input
         type="text"

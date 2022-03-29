@@ -1,21 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { Button, Heading } from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
 
 import "./ErrorPage.css";
 
 function ErrorPage() {
   return (
     <div className="error-page">
-      <Link to="/pokemon" className="title-page">
-        <Heading>Pokedex</Heading>
-      </Link>
-
       <p>Hi! I'm Snorlax, i'm blocking the path</p>
       <p>
         Click
-        <Link to="/pokemon">
+        <Link to="/">
           {" "}
           <Button colorScheme="blue">here</Button>{" "}
         </Link>

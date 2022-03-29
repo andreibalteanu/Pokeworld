@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 
 import { Heading } from "@chakra-ui/react";
 
-import ErrorPage from "../error-page/ErrorPage";
+import ErrorPage from "../ErrorPage/ErrorPage";
 import CardProfile from "../../components/CardProfile/CardProfile";
 import CardDescription from "../../components/CardDescription/CardDescription";
 import CardSprites from "../../components/CardSprites/CardSprites";

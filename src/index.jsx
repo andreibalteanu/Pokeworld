@@ -4,16 +4,18 @@ import { Routes, BrowserRouter, Route, Link } from "react-router-dom";
 
 import { ChakraProvider, Flex, Image, Spinner } from "@chakra-ui/react";
 
+import Layout from "components/Layout/Layout";
 import { PokemonDataProvider } from "./PokemonData";
 
 import pokemonLogo from "./images/pokemon-logo.png";
 import "./index.css";
 
-const Home = lazy(() => import("pages/home/Home"));
-const Pokedex = lazy(() => import("pages/pokedex/Pokedex"));
-const Pokemon = lazy(() => import("pages/pokemon/Pokemon"));
-const ErrorPage = lazy(() => import("pages/error-page/ErrorPage"));
-const Layout = lazy(() => import("components/Layout/Layout"));
+const Home = lazy(() => import("pages/Home/Home"));
+const Pokedex = lazy(() => import("pages/Pokedex/Pokedex"));
+const Pokemon = lazy(() => import("pages/Pokemon/Pokemon"));
+const Poketv = lazy(() => import("pages/Poketv/Poketv"));
+const Episodes = lazy(() => import("pages/Episodes/Episodes"));
+const ErrorPage = lazy(() => import("pages/ErrorPage/ErrorPage"));
 
 ReactDOM.render(
   <React.StrictMode>
@@ -26,20 +28,21 @@ ReactDOM.render(
             justify="space-evenly"
             align="center"
           >
-            <Suspense fallback={<Spinner size="xl" />}>
-              <Link to="/">
-                <Image src={pokemonLogo} alt="hello" className="title-app" />
-              </Link>
-
-              <Layout>
+            <Link to="/">
+              <Image src={pokemonLogo} alt="hello" className="title-app" />
+            </Link>
+            <Layout>
+              <Suspense fallback={<Spinner size="xl" />}>
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/pokemon" element={<Pokedex />} />
                   <Route path="/pokemon/:pokemonId" element={<Pokemon />} />
+                  <Route path="/poketv" element={<Poketv />} />
+                  <Route path="/poketv/:seriesName" element={<Episodes />} />
                   <Route path="/*" element={<ErrorPage />} />
                 </Routes>
-              </Layout>
-            </Suspense>
+              </Suspense>
+            </Layout>
           </Flex>
         </ChakraProvider>
       </BrowserRouter>
