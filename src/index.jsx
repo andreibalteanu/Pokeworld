@@ -14,6 +14,7 @@ const Home = lazy(() => import("pages/Home/Home"));
 const Pokedex = lazy(() => import("pages/Pokedex/Pokedex"));
 const Pokemon = lazy(() => import("pages/Pokemon/Pokemon"));
 const Poketv = lazy(() => import("pages/Poketv/Poketv"));
+const ViewerOptions = lazy(() => import("pages/ViewerOptions/ViewerOptions"));
 const PokemonViewer = lazy(() => import("pages/PokemonViewer/PokemonViewer"));
 const Episodes = lazy(() => import("pages/Episodes/Episodes"));
 const QuizGame = lazy(() => import("pages/QuizGame/QuizGame"));
@@ -46,7 +47,11 @@ ReactDOM.render(
                   <Route path="/poketv" element={<Poketv />} />
                   <Route path="/poketv/:seriesName" element={<Episodes />} />
                   <Route path="/quizgame" element={<QuizGame />} />
-                  <Route path="/pokemon-viewer" element={<PokemonViewer />} />
+                  <Route path="/viewer-options" element={<ViewerOptions />} />
+                  <Route
+                    path="/viewer-options/:pokemonName"
+                    element={<PokemonViewer />}
+                  />
                   <Route path="/*" element={<ErrorPage />} />
                 </Routes>
               </Suspense>

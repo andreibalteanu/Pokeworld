@@ -16,42 +16,42 @@ function Home() {
         justify="space-arounds"
       >
         <Link to="/pokemon">
-          <Button colorScheme="blue" className="menu-button">
+          <Button colorScheme="blue" className="app-button">
             POKEDEX
           </Button>
         </Link>
         <Link to="/poketv">
-          <Button colorScheme="blue" className="menu-button">
+          <Button colorScheme="blue" className="app-button">
             POKETV
           </Button>
         </Link>
         <Link to="/quizgame">
-          <Button colorScheme="blue" className="menu-button">
+          <Button colorScheme="blue" className="app-button">
             GUESS THE POKEMON
           </Button>
         </Link>
-        <Link to="/pokemon-viewer">
-          <Button colorScheme="blue" className="menu-button">
+        <Link to="/viewer-options">
+          <Button colorScheme="blue" className="app-button">
             POKEMON 3D VIEWER
           </Button>
         </Link>
         <Link to="/">
-          <Button colorScheme="blue" className="menu-button">
+          <Button colorScheme="blue" className="app-button">
             POKEMON SCANNER
           </Button>
         </Link>
         <Link to="/">
-          <Button colorScheme="blue" className="menu-button">
+          <Button colorScheme="blue" className="app-button">
             WALLPAPER GENERATOR
           </Button>
         </Link>
         <Link to="/">
-          <Button colorScheme="blue" className="menu-button">
+          <Button colorScheme="blue" className="app-button">
             MEMORY CARD GAME
           </Button>
         </Link>
         <Link to="/">
-          <Button colorScheme="blue" className="menu-button">
+          <Button colorScheme="blue" className="app-button">
             FLAPPY MAGIKARP
           </Button>
         </Link>

@@ -4,7 +4,6 @@
 .black-overlay {
   filter: brightness(0);
 }
-
-.menu-button {
-  margin-top: 10px;
+.app-button {
+  margin: 8px 0;
 }

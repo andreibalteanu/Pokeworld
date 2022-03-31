@@ -1,0 +1,47 @@
+import { Button, Flex, Heading } from "@chakra-ui/react";
+import React from "react";
+import { Link } from "react-router-dom";
+
+import "./ViewerOptions.css";
+
+function ViewerOptions() {
+  return (
+    <Flex direction="column" align="center">
+      <Heading className="title-page">Pokemon 3D viewer</Heading>
+      <Flex
+        className="container-of-buttons"
+        direction="column"
+        align="center"
+        justify="space-arounds"
+      >
+        <Link to="/viewer-options/mewtwo">
+          <Button colorScheme="blue" className="app-button">
+            Mewtwo
+          </Button>
+        </Link>
+        <Link to="/viewer-options/dialga">
+          <Button colorScheme="blue" className="app-button">
+            Dialga
+          </Button>
+        </Link>
+        <Link to="/viewer-options/garchomp">
+          <Button colorScheme="blue" className="app-button">
+            Garchomp
+          </Button>
+        </Link>
+        <Link to="/viewer-options/lugia">
+          <Button colorScheme="blue" className="app-button">
+            Lugia
+          </Button>
+        </Link>
+        <Link to="/viewer-options/charizard">
+          <Button colorScheme="blue" className="app-button">
+            Charizard
+          </Button>
+        </Link>
+      </Flex>
+    </Flex>
+  );
+}
+
+export default ViewerOptions;

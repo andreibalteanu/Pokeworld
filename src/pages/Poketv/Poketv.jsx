@@ -16,37 +16,37 @@ function Poketv() {
         justify="space-arounds"
       >
         <Link to="/poketv/indigo-league">
-          <Button colorScheme="blue" className="menu-button">
+          <Button colorScheme="blue" className="app-button">
             Indigo League
           </Button>
         </Link>
         <Link to="/poketv/the-johto-journeys">
-          <Button colorScheme="blue" className="menu-button">
+          <Button colorScheme="blue" className="app-button">
             The Johto Journeys
           </Button>
         </Link>
         <Link to="/poketv/advanced">
-          <Button colorScheme="blue" className="menu-button">
+          <Button colorScheme="blue" className="app-button">
             Advanced
           </Button>
         </Link>
         <Link to="/poketv/diamond-and-pearl">
-          <Button colorScheme="blue" className="menu-button">
+          <Button colorScheme="blue" className="app-button">
             Diamond and Pearl
           </Button>
         </Link>
         <Link to="/poketv/black-and-white">
-          <Button colorScheme="blue" className="menu-button">
+          <Button colorScheme="blue" className="app-button">
             Black & White
           </Button>
         </Link>
         <Link to="/poketv/x-and-y">
-          <Button colorScheme="blue" className="menu-button">
+          <Button colorScheme="blue" className="app-button">
             X & Y
           </Button>
         </Link>
         <Link to="/poketv/sun-and-moon">
-          <Button colorScheme="blue" className="menu-button">
+          <Button colorScheme="blue" className="app-button">
             Sun & Moon
           </Button>
         </Link>

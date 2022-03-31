@@ -17,7 +17,7 @@ const getOptionsArray = (array) => {
     const arr = [];
 
     while (arr.length < 4) {
-      const r = Math.floor(Math.random() * 1000) + 1;
+      const r = Math.floor(Math.random() * 300) + 1;
       if (arr.indexOf(r) === -1) arr.push(r);
     }
 
@@ -96,6 +96,7 @@ function QuizGame() {
         <div>
           Congratulations!
           <Button
+            className="app-button"
             onClick={() => {
               onNewGame();
             }}
@@ -112,7 +113,7 @@ function QuizGame() {
           <div>
             <Button
               colorScheme="blue"
-              className="menu-button"
+              className="app-button"
               onClick={() => {
                 onChoice(option);
               }}
