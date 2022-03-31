@@ -9,6 +9,7 @@ import "./Pokedex.css";
 
 function Pokedex() {
   const { pokemonData, addMorePokemons } = useContext(PokemonData);
+  console.log(pokemonData);
   const [value, setValue] = useState("");
   const typeFilter = (pokemonTypes) => {
     if (

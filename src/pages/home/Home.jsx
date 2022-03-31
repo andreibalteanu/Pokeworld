@@ -25,12 +25,12 @@ function Home() {
             POKETV
           </Button>
         </Link>
-        <Link to="/">
+        <Link to="/quizgame">
           <Button colorScheme="blue" className="menu-button">
             GUESS THE POKEMON
           </Button>
         </Link>
-        <Link to="/">
+        <Link to="/pokemon-viewer">
           <Button colorScheme="blue" className="menu-button">
             POKEMON 3D VIEWER
           </Button>
@@ -48,6 +48,11 @@ function Home() {
         <Link to="/">
           <Button colorScheme="blue" className="menu-button">
             MEMORY CARD GAME
+          </Button>
+        </Link>
+        <Link to="/">
+          <Button colorScheme="blue" className="menu-button">
+            FLAPPY MAGIKARP
           </Button>
         </Link>
       </Flex>

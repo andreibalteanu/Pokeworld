@@ -3,18 +3,25 @@ import { useFetch } from "./useFetch";
 
 const PokemonData = createContext({});
 
+const DEFAULT_OFFSET = 0;
+const DEFAULT_LIMIT = 1000;
+
+const pokemonApiUrl = (offset, limit = DEFAULT_LIMIT) =>
+  `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
+
 export function PokemonDataProvider({ children }) {
-  const [url, setUrl] = useState(
-    "https://pokeapi.co/api/v2/pokemon?offset=0&limit=21"
-  );
+  const [offset, setOffset] = useState(DEFAULT_OFFSET);
+
+  const url = pokemonApiUrl(offset);
+
   const { data } = useFetch(url);
+
   const [pokemonData, setPokemonData] = useState([]);
 
   const addMorePokemons = () => {
-    const offset = url.substring(url.indexOf("=") + 1, url.lastIndexOf("&"));
-    const newOffset = parseInt(offset, 10) + 21;
-    setUrl(url.replace(offset, newOffset));
+    setOffset(offset + DEFAULT_LIMIT);
   };
+
   useEffect(() => {
     async function fetchPokemons() {
       const pokemonDataTest = await Promise.all(

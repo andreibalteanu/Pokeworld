@@ -14,7 +14,9 @@ const Home = lazy(() => import("pages/Home/Home"));
 const Pokedex = lazy(() => import("pages/Pokedex/Pokedex"));
 const Pokemon = lazy(() => import("pages/Pokemon/Pokemon"));
 const Poketv = lazy(() => import("pages/Poketv/Poketv"));
+const PokemonViewer = lazy(() => import("pages/PokemonViewer/PokemonViewer"));
 const Episodes = lazy(() => import("pages/Episodes/Episodes"));
+const QuizGame = lazy(() => import("pages/QuizGame/QuizGame"));
 const ErrorPage = lazy(() => import("pages/ErrorPage/ErrorPage"));
 
 ReactDOM.render(
@@ -29,7 +31,11 @@ ReactDOM.render(
             align="center"
           >
             <Link to="/">
-              <Image src={pokemonLogo} alt="hello" className="title-app" />
+              <Image
+                src={pokemonLogo}
+                alt="pokemonLogo"
+                className="title-app"
+              />
             </Link>
             <Layout>
               <Suspense fallback={<Spinner size="xl" />}>
@@ -39,6 +45,8 @@ ReactDOM.render(
                   <Route path="/pokemon/:pokemonId" element={<Pokemon />} />
                   <Route path="/poketv" element={<Poketv />} />
                   <Route path="/poketv/:seriesName" element={<Episodes />} />
+                  <Route path="/quizgame" element={<QuizGame />} />
+                  <Route path="/pokemon-viewer" element={<PokemonViewer />} />
                   <Route path="/*" element={<ErrorPage />} />
                 </Routes>
               </Suspense>
