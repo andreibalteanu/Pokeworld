@@ -35,6 +35,11 @@ function Home() {
             POKEMON 3D VIEWER
           </Button>
         </Link>
+        <Link to="/flappy-magikarp">
+          <Button colorScheme="blue" className="app-button">
+            FLAPPY MAGIKARP
+          </Button>
+        </Link>
         <Link to="/">
           <Button colorScheme="blue" className="app-button">
             POKEMON SCANNER
@@ -48,11 +53,6 @@ function Home() {
         <Link to="/">
           <Button colorScheme="blue" className="app-button">
             MEMORY CARD GAME
-          </Button>
-        </Link>
-        <Link to="/">
-          <Button colorScheme="blue" className="app-button">
-            FLAPPY MAGIKARP
           </Button>
         </Link>
       </Flex>

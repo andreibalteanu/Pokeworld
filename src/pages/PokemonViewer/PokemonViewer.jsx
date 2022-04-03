@@ -9,7 +9,6 @@ import "./PokemonViewer.css";
 
 function PokemonViewer() {
   const params = useParams();
-  console.log(params);
   const viewerSource = () => {
     switch (params.pokemonName) {
       case "mewtwo": {

@@ -18,6 +18,9 @@ const ViewerOptions = lazy(() => import("pages/ViewerOptions/ViewerOptions"));
 const PokemonViewer = lazy(() => import("pages/PokemonViewer/PokemonViewer"));
 const Episodes = lazy(() => import("pages/Episodes/Episodes"));
 const QuizGame = lazy(() => import("pages/QuizGame/QuizGame"));
+const FlappyMagikarp = lazy(() =>
+  import("pages/FlappyMagikarp/FlappyMagikarp")
+);
 const ErrorPage = lazy(() => import("pages/ErrorPage/ErrorPage"));
 
 ReactDOM.render(
@@ -52,6 +55,7 @@ ReactDOM.render(
                     path="/viewer-options/:pokemonName"
                     element={<PokemonViewer />}
                   />
+                  <Route path="/flappy-magikarp" element={<FlappyMagikarp />} />
                   <Route path="/*" element={<ErrorPage />} />
                 </Routes>
               </Suspense>

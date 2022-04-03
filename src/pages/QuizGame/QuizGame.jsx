@@ -76,8 +76,6 @@ function QuizGame() {
     setGame(newGame);
   };
 
-  console.log(game);
-
   return (
     <Flex direction="column" align="center">
       <Heading className="title-page">Guess the pokemon</Heading>
