@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 
-import { Flex, Heading } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import styled from "styled-components";
 
+import TopPage from "components/TopPage/TopPage";
 import MagikarpSrc from "../../images/pokemon-magikarp.png";
 import UnderWater from "../../images/underwater.jpg";
 
@@ -94,7 +95,7 @@ function FlappyMagikarp() {
 
   return (
     <Flex direction="column" align="center">
-      <Heading className="title-page">Flappy Magikarp</Heading>
+      <TopPage path="/" title="Flappy Magikarp" />
       <Div>
         <GameBox onClick={handleClick} height={GAME_HEIGHT} width={GAME_WIDTH}>
           <Obstacle

@@ -40,6 +40,18 @@
 .rock {
   background-color: #c89d7c;
 }
+.ice {
+  background-color: #cceaeb;
+}
+.dragon {
+  background-color: #9c5bd8;
+}
+.dark {
+  background-color: #575757;
+}
+.steel {
+  background-color: #969696;
+}
 .grass-type {
   background-color: #6cb647;
 }
@@ -81,4 +93,16 @@
 }
 .rock-type {
   background-color: #b68f71;
+}
+.ice-type {
+  background-color: #b8d2d3;
+}
+.dragon-type {
+  background-color: #8850bd;
+}
+.dark-type {
+  background-color: #3f3f3f;
+}
+.steel-type {
+  background-color: #757575;
 }

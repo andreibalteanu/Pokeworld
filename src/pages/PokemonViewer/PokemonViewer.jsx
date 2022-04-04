@@ -1,9 +1,10 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import { DAEModel } from "react-3d-viewer";
-import { Flex, Heading } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import ErrorPage from "pages/ErrorPage/ErrorPage";
+import TopPage from "components/TopPage/TopPage";
 
 import "./PokemonViewer.css";
 
@@ -12,19 +13,19 @@ function PokemonViewer() {
   const viewerSource = () => {
     switch (params.pokemonName) {
       case "mewtwo": {
-        return "/assets/Mewtwo/pmxxx1_00_fi.dae";
+        return "/assets/3D-Viewer/Mewtwo/pmxxx1_00_fi.dae";
       }
       case "dialga": {
-        return "/assets/Dialga/Dialga_ColladaMax.DAE";
+        return "/assets/3D-Viewer/Dialga/Dialga_ColladaMax.DAE";
       }
       case "lugia": {
-        return "/assets/Lugia/Lugia_ColladaMax.DAE";
+        return "/assets/3D-Viewer/Lugia/Lugia_ColladaMax.DAE";
       }
       case "garchomp": {
-        return "/assets/Garchomp/GarchompM_OpenCollada.DAE";
+        return "/assets/3D-Viewer/Garchomp/GarchompM_OpenCollada.DAE";
       }
       case "charizard": {
-        return "/assets/Charizard/Charizard_ColladaMax.DAE";
+        return "/assets/3D-Viewer/Charizard/Charizard_ColladaMax.DAE";
       }
       default:
         return <ErrorPage />;
@@ -37,14 +38,12 @@ function PokemonViewer() {
       justify="space-between"
       className="pokemon-viewer"
     >
-      <Link to="/viewer-options" className="title-page pokemon-viewer-title">
-        <Heading>Pokemon 3D viewer</Heading>
-      </Link>
+      <TopPage path="/viewer-options" title="Pokemon 3D viewer" />
       <DAEModel
         src={viewerSource()}
         onLoad={() => {}}
-        width={500}
-        height={500}
+        width={700}
+        height={700}
       />
     </Flex>
   );

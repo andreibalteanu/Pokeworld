@@ -2,7 +2,7 @@
 }
 
 .black-overlay {
-  filter: brightness(0);
+  filter: var(--brightness);
 }
 .app-button {
   margin: 8px 0;

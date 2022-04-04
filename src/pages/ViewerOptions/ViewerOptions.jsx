@@ -1,4 +1,5 @@
-import { Button, Flex, Heading } from "@chakra-ui/react";
+import { Button, Flex } from "@chakra-ui/react";
+import TopPage from "components/TopPage/TopPage";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -7,7 +8,7 @@ import "./ViewerOptions.css";
 function ViewerOptions() {
   return (
     <Flex direction="column" align="center">
-      <Heading className="title-page">Pokemon 3D viewer</Heading>
+      <TopPage path="/" title="Pokemon 3D viewer" />
       <Flex
         className="container-of-buttons"
         direction="column"

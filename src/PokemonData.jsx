@@ -10,6 +10,8 @@ const pokemonApiUrl = (offset, limit = DEFAULT_LIMIT) =>
   `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
 
 export function PokemonDataProvider({ children }) {
+  const [theme, setTheme] = useState("light");
+
   const [offset, setOffset] = useState(DEFAULT_OFFSET);
 
   const url = pokemonApiUrl(offset);
@@ -17,6 +19,11 @@ export function PokemonDataProvider({ children }) {
   const { data } = useFetch(url);
 
   const [pokemonData, setPokemonData] = useState([]);
+
+  const switchTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+  };
 
   const addMorePokemons = () => {
     setOffset(offset + DEFAULT_LIMIT);
@@ -39,7 +46,15 @@ export function PokemonDataProvider({ children }) {
   }, [data]);
 
   return (
-    <PokemonData.Provider value={{ url, pokemonData, addMorePokemons }}>
+    <PokemonData.Provider
+      value={{
+        theme,
+        switchTheme,
+        url,
+        pokemonData,
+        addMorePokemons,
+      }}
+    >
       {children}
     </PokemonData.Provider>
   );

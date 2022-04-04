@@ -1,13 +1,12 @@
-import { Button, Flex, Heading, Text } from "@chakra-ui/react";
+import { Button, Flex, Text } from "@chakra-ui/react";
+import TopPage from "components/TopPage/TopPage";
 import React from "react";
 import { Link } from "react-router-dom";
 
 function Poketv() {
   return (
     <Flex direction="column" align="center">
-      <Link to="/poketv" className="title-page">
-        <Heading>Poke TV</Heading>
-      </Link>
+      <TopPage path="/" title="Poke TV" />
       <Text>Series:</Text>
       <Flex
         className="container-of-buttons"

@@ -1,8 +1,21 @@
+:root {
+  --background: rgb(250, 242, 232);
+  --text: #000;
+  --brightness: brightness(0);
+}
+
+[data-theme="dark"] {
+  --background: #000;
+  --text: #fff;
+  --brightness: brightness(0) invert(1);
+}
 .app-wrapper {
   width: 70%;
   height: 70%;
   overflow: auto;
   border-radius: 20px;
   box-shadow: -17px -17px 20px #0004;
-  background-color: rgb(250, 242, 232);
+  background-color: var(--background);
+  color: var(--text);
+  transition: all 0.5s;
 }

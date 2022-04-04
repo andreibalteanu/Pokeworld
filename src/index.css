@@ -20,6 +20,14 @@ code {
 .title-app {
   height: 120px;
 }
+.top-page {
+  width: 100%;
+}
 .title-page {
   margin: 20px 0;
+  padding-right: 50px;
+}
+.back-arrow {
+  margin-top: 30px;
+  margin-left: 20px;
 }

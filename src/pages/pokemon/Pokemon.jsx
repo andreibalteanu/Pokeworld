@@ -1,8 +1,7 @@
 import { React, useContext } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
-import { Heading } from "@chakra-ui/react";
-
+import TopPage from "components/TopPage/TopPage";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import CardProfile from "../../components/CardProfile/CardProfile";
 import CardDescription from "../../components/CardDescription/CardDescription";
@@ -24,9 +23,7 @@ function Pokemon() {
   }
   return (
     <div className="pokemon">
-      <Link to="/pokemon" className="title-page">
-        <Heading>Pokedex</Heading>
-      </Link>
+      <TopPage path="/pokemon" title="Pokedex" />
 
       <div className="top-pokemon">
         <CardProfile

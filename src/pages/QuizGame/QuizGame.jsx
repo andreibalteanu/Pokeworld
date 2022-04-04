@@ -2,11 +2,12 @@ import React, { useState, useContext, useEffect } from "react";
 
 import { shuffle } from "lodash";
 
-import { Button, Flex, Heading, Image } from "@chakra-ui/react";
+import { Button, Flex, Image } from "@chakra-ui/react";
 
 import PokemonData from "PokemonData";
 
 import "./QuizGame.css";
+import TopPage from "components/TopPage/TopPage";
 
 const SUCCESS = "success";
 const FAILURE = "failure";
@@ -78,7 +79,7 @@ function QuizGame() {
 
   return (
     <Flex direction="column" align="center">
-      <Heading className="title-page">Guess the pokemon</Heading>
+      <TopPage path="/" title="Guess the pokemon" />
       <Image
         src={
           game.correct
