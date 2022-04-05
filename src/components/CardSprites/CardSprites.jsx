@@ -1,3 +1,4 @@
+import { Text } from "@chakra-ui/react";
 import React from "react";
 
 import "./CardSprites.css";
@@ -8,7 +9,7 @@ function CardSprites({ images, types }) {
   newImages.pop();
   return (
     <div className={`card-sprites ${types[0].type.name}`}>
-      <h2>Sprites</h2>
+      <Text fontSize="2xl">Sprites</Text>
       <div className="card-sprites-versions">
         {newImages.map((image, index) => {
           if (image != null) {

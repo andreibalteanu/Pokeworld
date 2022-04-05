@@ -1,3 +1,4 @@
+import { Text } from "@chakra-ui/react";
 import React from "react";
 
 import "./CardEvolutions.css";
@@ -5,7 +6,7 @@ import "./CardEvolutions.css";
 export default function CardEvolutions({ types }) {
   return (
     <div className={`card-evolution ${types[0].type.name}`}>
-      <h2>Evolutions</h2>
+      <Text fontSize="2xl">Evolutions</Text>
       <div className="card-evolutions-versions">
         <div className="card-evolutions-item">
           <p>Bulbasaur</p>

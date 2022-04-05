@@ -1,23 +1,13 @@
+import { Text } from "@chakra-ui/react";
 import React from "react";
 
 import "./CardDescription.css";
 
-function CardDescription({ types, stats, games }) {
+function CardDescription({ types, stats }) {
   return (
     <div className="card-description">
       <div className="title-description">
-        <h3>Description</h3>
-        <div className="dropdown-container">
-          <h3>Game:</h3>
-          <select className="dropdown-games">
-            {games.map((game, index) => (
-              <option key={`dropdown-games-game${index}`}>
-                {game.version.name.charAt(0).toUpperCase() +
-                  game.version.name.slice(1)}
-              </option>
-            ))}
-          </select>
-        </div>
+        <Text fontSize="2xl">Description</Text>
       </div>
       <div className="top-description">
         <p>
@@ -25,7 +15,7 @@ function CardDescription({ types, stats, games }) {
           degrees Fahrenheit, surrounding its enemies and encasing them in ice
         </p>
       </div>
-      <h3>Stats</h3>
+      <Text fontSize="2xl">Stats</Text>
       <div className={`bottom-description ${types[0].type.name}`}>
         <div>
           <p>HP</p>

@@ -92,10 +92,10 @@ function QuizGame() {
       />
 
       {game.status === SUCCESS && (
-        <div>
+        <div className="quiz-message">
           Congratulations!
           <Button
-            className="app-button"
+            className="success-button"
             onClick={() => {
               onNewGame();
             }}
@@ -105,14 +105,16 @@ function QuizGame() {
         </div>
       )}
 
-      {game.status === FAILURE && <div>Wrong choice! Try again</div>}
+      {game.status === FAILURE && (
+        <div className="quiz-message">Wrong choice! Try again</div>
+      )}
 
       {game.options &&
         game.options.map((option) => (
           <div>
             <Button
               colorScheme="blue"
-              className="app-button"
+              className="quiz-button"
               onClick={() => {
                 onChoice(option);
               }}

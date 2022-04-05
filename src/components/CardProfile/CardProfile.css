@@ -1,7 +1,6 @@
 .card-profile {
   width: 50%;
   margin: 20px;
-  border: solid black 1px;
   border-radius: 20px;
   padding-bottom: 20px;
 }
@@ -32,6 +31,6 @@
   margin: 10px;
 }
 .image-profile {
-  width: 400px;
-  height: 400px;
+  width: 90%;
+  height: 90%;
 }

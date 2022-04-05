@@ -22,7 +22,6 @@
 .bottom-description {
   display: flex;
   justify-content: space-between;
-  border: solid black 1px;
   border-radius: 20px;
   padding: 10px 20px;
 }

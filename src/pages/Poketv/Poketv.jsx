@@ -3,6 +3,8 @@ import TopPage from "components/TopPage/TopPage";
 import React from "react";
 import { Link } from "react-router-dom";
 
+import "./Poketv.css";
+
 function Poketv() {
   return (
     <Flex direction="column" align="center">
@@ -15,37 +17,37 @@ function Poketv() {
         justify="space-arounds"
       >
         <Link to="/poketv/indigo-league">
-          <Button colorScheme="blue" className="app-button">
+          <Button colorScheme="blue" className="series-button">
             Indigo League
           </Button>
         </Link>
         <Link to="/poketv/the-johto-journeys">
-          <Button colorScheme="blue" className="app-button">
+          <Button colorScheme="blue" className="series-button">
             The Johto Journeys
           </Button>
         </Link>
         <Link to="/poketv/advanced">
-          <Button colorScheme="blue" className="app-button">
+          <Button colorScheme="blue" className="series-button">
             Advanced
           </Button>
         </Link>
         <Link to="/poketv/diamond-and-pearl">
-          <Button colorScheme="blue" className="app-button">
+          <Button colorScheme="blue" className="series-button">
             Diamond and Pearl
           </Button>
         </Link>
         <Link to="/poketv/black-and-white">
-          <Button colorScheme="blue" className="app-button">
+          <Button colorScheme="blue" className="series-button">
             Black & White
           </Button>
         </Link>
         <Link to="/poketv/x-and-y">
-          <Button colorScheme="blue" className="app-button">
+          <Button colorScheme="blue" className="series-button">
             X & Y
           </Button>
         </Link>
         <Link to="/poketv/sun-and-moon">
-          <Button colorScheme="blue" className="app-button">
+          <Button colorScheme="blue" className="series-button">
             Sun & Moon
           </Button>
         </Link>

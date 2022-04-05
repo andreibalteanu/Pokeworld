@@ -4,6 +4,13 @@
 .black-overlay {
   filter: var(--brightness);
 }
-.app-button {
+.quiz-message {
+  margin: 5px 0;
+}
+.success-button {
+  margin-left: 10px;
+}
+.quiz-button {
   margin: 8px 0;
+  width: 200px;
 }

@@ -11,6 +11,7 @@ const pokemonApiUrl = (offset, limit = DEFAULT_LIMIT) =>
 
 export function PokemonDataProvider({ children }) {
   const [theme, setTheme] = useState("light");
+  const [toggleStatus, setToggleStatus] = useState(true);
 
   const [offset, setOffset] = useState(DEFAULT_OFFSET);
 
@@ -22,6 +23,7 @@ export function PokemonDataProvider({ children }) {
 
   const switchTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
+    setToggleStatus(!toggleStatus);
     setTheme(newTheme);
   };
 
@@ -49,6 +51,7 @@ export function PokemonDataProvider({ children }) {
     <PokemonData.Provider
       value={{
         theme,
+        toggleStatus,
         switchTheme,
         url,
         pokemonData,

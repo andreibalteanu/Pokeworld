@@ -2,8 +2,20 @@
   height: 100%;
 }
 .menu {
-  margin: 25px 0;
+  margin: 25px 0 25px 140px;
+}
+.toggle-label {
+  margin: 3px 10px 0 0;
+}
+
+.container-of-buttons {
+  width: 100%;
 }
 .app-button {
-  margin: 8px 0;
+  width: 350px;
+  height: 80px;
+  margin: 15px;
+}
+.menu-icon {
+  margin-right: 10px;
 }

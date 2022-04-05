@@ -13,61 +13,68 @@ import {
   faCube,
   faGamepad,
   faToggleOn,
+  faToggleOff,
 } from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
-  const { switchTheme } = useContext(PokemonData);
+  const { switchTheme, toggleStatus } = useContext(PokemonData);
   return (
     <Flex direction="column" align="center" className="home">
-      <Flex>
-        <Heading className="menu">Menu</Heading>
-        <div>
-          <FontAwesomeIcon icon={faToggleOn} size="2xl" onClick={switchTheme} />
-        </div>
+      <Flex justify="space-around" className="top-page menu">
+        <div> </div>
+        <Heading>Menu</Heading>
+        <Flex>
+          <p className="toggle-label">Change theme</p>
+          <FontAwesomeIcon
+            icon={toggleStatus ? faToggleOff : faToggleOn}
+            size="2xl"
+            onClick={switchTheme}
+          />
+        </Flex>
       </Flex>
       <Flex
         className="container-of-buttons"
-        direction="column"
-        align="center"
-        justify="space-arounds"
+        direction="row"
+        wrap="wrap"
+        justifyContent="center"
       >
         <Link to="/pokemon">
-          <Button colorScheme="blue" className="app-button">
-            <FontAwesomeIcon icon={faBook} />
+          <Button colorScheme="blue" className="app-button" fontSize="20px">
+            <FontAwesomeIcon icon={faBook} className="menu-icon" />
             POKEDEX
           </Button>
         </Link>
         <Link to="/poketv">
-          <Button colorScheme="blue" className="app-button">
-            <FontAwesomeIcon icon={faTv} />
+          <Button colorScheme="blue" className="app-button" fontSize="20px">
+            <FontAwesomeIcon icon={faTv} className="menu-icon" />
             POKETV
           </Button>
         </Link>
         <Link to="/quizgame">
-          <Button colorScheme="blue" className="app-button">
-            <FontAwesomeIcon icon={faQuestion} />
+          <Button colorScheme="blue" className="app-button" fontSize="20px">
+            <FontAwesomeIcon icon={faQuestion} className="menu-icon" />
             GUESS THE POKEMON
           </Button>
         </Link>
         <Link to="/viewer-options">
-          <Button colorScheme="blue" className="app-button">
-            <FontAwesomeIcon icon={faCube} />
+          <Button colorScheme="blue" className="app-button" fontSize="20px">
+            <FontAwesomeIcon icon={faCube} className="menu-icon" />
             POKEMON 3D VIEWER
           </Button>
         </Link>
         <Link to="/flappy-magikarp">
-          <Button colorScheme="blue" className="app-button">
-            <FontAwesomeIcon icon={faGamepad} />
+          <Button colorScheme="blue" className="app-button" fontSize="20px">
+            <FontAwesomeIcon icon={faGamepad} className="menu-icon" />
             FLAPPY MAGIKARP
           </Button>
         </Link>
         <Link to="/">
-          <Button colorScheme="blue" className="app-button">
+          <Button colorScheme="blue" className="app-button" fontSize="20px">
             POKEMON SCANNER
           </Button>
         </Link>
         <Link to="/">
-          <Button colorScheme="blue" className="app-button">
+          <Button colorScheme="blue" className="app-button" fontSize="20px">
             MEMORY CARD GAME
           </Button>
         </Link>
