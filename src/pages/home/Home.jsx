@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
 import { Button, Flex, Heading } from "@chakra-ui/react";
+import { motion } from "framer-motion";
+
 import PokemonData from "PokemonData";
 
 import "./Home.css";
@@ -14,14 +16,38 @@ import {
   faGamepad,
   faToggleOn,
   faToggleOff,
+  faChessBoard,
 } from "@fortawesome/free-solid-svg-icons";
+
+const MotionButton = motion(Button);
 
 function Home() {
   const { switchTheme, toggleStatus } = useContext(PokemonData);
+  const initialButtonSize = {
+    size: 0,
+  };
+  const animateButtonSize = {
+    size: 1,
+  };
+  const hoverButtonSize = {
+    size: 1.1,
+  };
   return (
     <Flex direction="column" align="center" className="home">
       <Flex justify="space-around" className="top-page menu">
-        <div> </div>
+        <motion.div
+          initial={{
+            size: 0,
+          }}
+          animate={{
+            size: 1,
+          }}
+          whileHover={{
+            size: 1.1,
+          }}
+        >
+          Hello
+        </motion.div>
         <Heading>Menu</Heading>
         <Flex>
           <p className="toggle-label">Change theme</p>
@@ -39,44 +65,76 @@ function Home() {
         justifyContent="center"
       >
         <Link to="/pokemon">
-          <Button colorScheme="blue" className="app-button" fontSize="20px">
+          <MotionButton
+            initial={initialButtonSize}
+            animate={animateButtonSize}
+            whileHover={hoverButtonSize}
+            colorScheme="blue"
+            className="app-button"
+            fontSize="20px"
+          >
             <FontAwesomeIcon icon={faBook} className="menu-icon" />
             POKEDEX
-          </Button>
+          </MotionButton>
         </Link>
         <Link to="/poketv">
-          <Button colorScheme="blue" className="app-button" fontSize="20px">
+          <MotionButton
+            colorScheme="blue"
+            className="app-button"
+            fontSize="20px"
+          >
             <FontAwesomeIcon icon={faTv} className="menu-icon" />
             POKETV
-          </Button>
+          </MotionButton>
         </Link>
         <Link to="/quizgame">
-          <Button colorScheme="blue" className="app-button" fontSize="20px">
+          <MotionButton
+            colorScheme="blue"
+            className="app-button"
+            fontSize="20px"
+          >
             <FontAwesomeIcon icon={faQuestion} className="menu-icon" />
             GUESS THE POKEMON
-          </Button>
+          </MotionButton>
         </Link>
         <Link to="/viewer-options">
-          <Button colorScheme="blue" className="app-button" fontSize="20px">
+          <MotionButton
+            colorScheme="blue"
+            className="app-button"
+            fontSize="20px"
+          >
             <FontAwesomeIcon icon={faCube} className="menu-icon" />
             POKEMON 3D VIEWER
-          </Button>
+          </MotionButton>
         </Link>
         <Link to="/flappy-magikarp">
-          <Button colorScheme="blue" className="app-button" fontSize="20px">
+          <MotionButton
+            colorScheme="blue"
+            className="app-button"
+            fontSize="20px"
+          >
             <FontAwesomeIcon icon={faGamepad} className="menu-icon" />
             FLAPPY MAGIKARP
-          </Button>
+          </MotionButton>
         </Link>
-        <Link to="/">
-          <Button colorScheme="blue" className="app-button" fontSize="20px">
-            POKEMON SCANNER
-          </Button>
-        </Link>
-        <Link to="/">
-          <Button colorScheme="blue" className="app-button" fontSize="20px">
+        <Link to="/cardgame">
+          <MotionButton
+            colorScheme="blue"
+            className="app-button"
+            fontSize="20px"
+          >
+            <FontAwesomeIcon icon={faChessBoard} className="menu-icon" />
             MEMORY CARD GAME
-          </Button>
+          </MotionButton>
+        </Link>
+        <Link to="/">
+          <MotionButton
+            colorScheme="blue"
+            className="app-button"
+            fontSize="20px"
+          >
+            POKEMON SCANNER
+          </MotionButton>
         </Link>
       </Flex>
     </Flex>

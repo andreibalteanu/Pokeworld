@@ -21,6 +21,7 @@ const QuizGame = lazy(() => import("pages/QuizGame/QuizGame"));
 const FlappyMagikarp = lazy(() =>
   import("pages/FlappyMagikarp/FlappyMagikarp")
 );
+const CardGame = lazy(() => import("pages/CardGame/CardGame"));
 const ErrorPage = lazy(() => import("pages/ErrorPage/ErrorPage"));
 
 ReactDOM.render(
@@ -56,6 +57,7 @@ ReactDOM.render(
                     element={<PokemonViewer />}
                   />
                   <Route path="/flappy-magikarp" element={<FlappyMagikarp />} />
+                  <Route path="/cardgame" element={<CardGame />} />
                   <Route path="/*" element={<ErrorPage />} />
                 </Routes>
               </Suspense>

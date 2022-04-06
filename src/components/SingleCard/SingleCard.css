@@ -1,0 +1,8 @@
+.card {
+  margin: 10px 10px;
+}
+
+.front,
+.back {
+  width: 130px;
+}
