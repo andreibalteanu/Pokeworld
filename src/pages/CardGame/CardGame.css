@@ -1,3 +1,6 @@
 .card-container {
   width: 60%;
 }
+.success-message {
+  margin-right: 20px;
+}
