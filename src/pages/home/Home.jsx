@@ -130,18 +130,6 @@ function Home() {
             MEMORY CARD GAME
           </MotionButton>
         </Link>
-        <Link to="/">
-          <MotionButton
-            initial={initialButtonSize}
-            animate={animateButtonSize}
-            whileHover={hoverButtonSize}
-            colorScheme="blue"
-            className="app-button"
-            fontSize="20px"
-          >
-            POKEMON SCANNER
-          </MotionButton>
-        </Link>
       </Flex>
     </Flex>
   );
