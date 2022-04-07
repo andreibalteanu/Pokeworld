@@ -24,30 +24,18 @@ const MotionButton = motion(Button);
 function Home() {
   const { switchTheme, toggleStatus } = useContext(PokemonData);
   const initialButtonSize = {
-    size: 0,
+    scale: 0,
   };
   const animateButtonSize = {
-    size: 1,
+    scale: 1,
   };
   const hoverButtonSize = {
-    size: 1.1,
+    scale: 1.1,
   };
   return (
     <Flex direction="column" align="center" className="home">
       <Flex justify="space-around" className="top-page menu">
-        <motion.div
-          initial={{
-            size: 0,
-          }}
-          animate={{
-            size: 1,
-          }}
-          whileHover={{
-            size: 1.1,
-          }}
-        >
-          Hello
-        </motion.div>
+        <div> </div>
         <Heading>Menu</Heading>
         <Flex>
           <p className="toggle-label">Change theme</p>
@@ -79,6 +67,9 @@ function Home() {
         </Link>
         <Link to="/poketv">
           <MotionButton
+            initial={initialButtonSize}
+            animate={animateButtonSize}
+            whileHover={hoverButtonSize}
             colorScheme="blue"
             className="app-button"
             fontSize="20px"
@@ -89,6 +80,9 @@ function Home() {
         </Link>
         <Link to="/quizgame">
           <MotionButton
+            initial={initialButtonSize}
+            animate={animateButtonSize}
+            whileHover={hoverButtonSize}
             colorScheme="blue"
             className="app-button"
             fontSize="20px"
@@ -99,6 +93,9 @@ function Home() {
         </Link>
         <Link to="/viewer-options">
           <MotionButton
+            initial={initialButtonSize}
+            animate={animateButtonSize}
+            whileHover={hoverButtonSize}
             colorScheme="blue"
             className="app-button"
             fontSize="20px"
@@ -109,6 +106,9 @@ function Home() {
         </Link>
         <Link to="/flappy-magikarp">
           <MotionButton
+            initial={initialButtonSize}
+            animate={animateButtonSize}
+            whileHover={hoverButtonSize}
             colorScheme="blue"
             className="app-button"
             fontSize="20px"
@@ -119,6 +119,9 @@ function Home() {
         </Link>
         <Link to="/cardgame">
           <MotionButton
+            initial={initialButtonSize}
+            animate={animateButtonSize}
+            whileHover={hoverButtonSize}
             colorScheme="blue"
             className="app-button"
             fontSize="20px"
@@ -129,6 +132,9 @@ function Home() {
         </Link>
         <Link to="/">
           <MotionButton
+            initial={initialButtonSize}
+            animate={animateButtonSize}
+            whileHover={hoverButtonSize}
             colorScheme="blue"
             className="app-button"
             fontSize="20px"
