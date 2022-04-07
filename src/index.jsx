@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { Routes, BrowserRouter, Route, Link } from "react-router-dom";
 
 import { ChakraProvider, Flex, Image, Spinner } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 import Layout from "components/Layout/Layout";
 import { PokemonDataProvider } from "./PokemonData";
@@ -23,6 +24,7 @@ const FlappyMagikarp = lazy(() =>
 );
 const CardGame = lazy(() => import("pages/CardGame/CardGame"));
 const ErrorPage = lazy(() => import("pages/ErrorPage/ErrorPage"));
+const MotionImage = motion(Image);
 
 ReactDOM.render(
   <React.StrictMode>
@@ -36,7 +38,10 @@ ReactDOM.render(
             align="center"
           >
             <Link to="/">
-              <Image
+              <MotionImage
+                whileHover={{
+                  scale: 1.1,
+                }}
                 src={pokemonLogo}
                 alt="pokemonLogo"
                 className="title-app"
