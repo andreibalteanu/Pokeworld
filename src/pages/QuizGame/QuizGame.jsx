@@ -17,7 +17,7 @@ const getOptionsArray = (array) => {
     const arr = [];
 
     while (arr.length < 4) {
-      const r = Math.floor(Math.random() * 300) + 1;
+      const r = Math.floor(Math.random() * 200) + 1;
       if (arr.indexOf(r) === -1) arr.push(r);
     }
 

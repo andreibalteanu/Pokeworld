@@ -5,7 +5,7 @@ import { useFetch } from "./useFetch";
 const PokemonData = createContext({});
 
 const DEFAULT_OFFSET = 0;
-const DEFAULT_LIMIT = 300;
+const DEFAULT_LIMIT = 200;
 
 const pokemonApiUrl = (offset, limit = DEFAULT_LIMIT) =>
   `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
