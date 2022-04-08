@@ -1,13 +1,12 @@
 import React, { useState, useContext, useEffect } from "react";
 
 import { shuffle } from "lodash";
-
 import { Button, Flex, Image } from "@chakra-ui/react";
 
 import PokemonData from "PokemonData";
+import TopPage from "components/TopPage/TopPage";
 
 import "./QuizGame.css";
-import TopPage from "components/TopPage/TopPage";
 
 const SUCCESS = "success";
 const FAILURE = "failure";

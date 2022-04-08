@@ -1,7 +1,9 @@
-import { Button, Flex } from "@chakra-ui/react";
-import TopPage from "components/TopPage/TopPage";
 import React from "react";
 import { Link } from "react-router-dom";
+
+import { Button, Flex } from "@chakra-ui/react";
+
+import TopPage from "components/TopPage/TopPage";
 
 import "./ViewerOptions.css";
 

@@ -3,10 +3,6 @@ import { Link } from "react-router-dom";
 
 import { Button, Flex, Heading } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-
-import PokemonData from "PokemonData";
-
-import "./Home.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBook,
@@ -18,6 +14,10 @@ import {
   faToggleOff,
   faChessBoard,
 } from "@fortawesome/free-solid-svg-icons";
+
+import PokemonData from "PokemonData";
+
+import "./Home.css";
 
 const MotionButton = motion(Button);
 

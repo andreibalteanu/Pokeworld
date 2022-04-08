@@ -1,9 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
+import { Flex, Heading } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeftLong } from "@fortawesome/free-solid-svg-icons";
-import { Flex, Heading } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
 
 function TopPage({ path, title }) {
   return (

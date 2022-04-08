@@ -7,23 +7,23 @@ import { motion } from "framer-motion";
 
 import Layout from "components/Layout/Layout";
 import { PokemonDataProvider } from "./PokemonData";
-
 import pokemonLogo from "./images/pokemon-logo.png";
+
 import "./index.css";
 
-const Home = lazy(() => import("./pages/home/Home"));
-const Pokedex = lazy(() => import("./pages/pokedex/Pokedex"));
-const Pokemon = lazy(() => import("./pages/pokemon/Pokemon"));
-const Poketv = lazy(() => import("./pages/poketv/Poketv"));
-const ViewerOptions = lazy(() => import("./pages/viewerOptions/ViewerOptions"));
-const PokemonViewer = lazy(() => import("./pages/pokemonViewer/PokemonViewer"));
-const Episodes = lazy(() => import("./pages/episodes/Episodes"));
-const QuizGame = lazy(() => import("./pages/quizGame/QuizGame"));
+const Home = lazy(() => import("pages/home/Home"));
+const Pokedex = lazy(() => import("pages/pokedex/Pokedex"));
+const Pokemon = lazy(() => import("pages/pokemon/Pokemon"));
+const Poketv = lazy(() => import("pages/poketv/Poketv"));
+const ViewerOptions = lazy(() => import("pages/viewerOptions/ViewerOptions"));
+const PokemonViewer = lazy(() => import("pages/pokemonViewer/PokemonViewer"));
+const Episodes = lazy(() => import("pages/episodes/Episodes"));
+const QuizGame = lazy(() => import("pages/quizGame/QuizGame"));
 const FlappyMagikarp = lazy(() =>
-  import("./pages/flappyMagikarp/FlappyMagikarp")
+  import("pages/flappyMagikarp/FlappyMagikarp")
 );
-const CardGame = lazy(() => import("./pages/cardGame/CardGame"));
-const ErrorPage = lazy(() => import("./pages/errorPage/ErrorPage"));
+const CardGame = lazy(() => import("pages/cardGame/CardGame"));
+const ErrorPage = lazy(() => import("pages/errorPage/ErrorPage"));
 const MotionImage = motion(Image);
 
 ReactDOM.render(

@@ -1,15 +1,16 @@
-/* eslint-disable no-unused-expressions */
-/* eslint-disable no-unused-vars */
-import "./CardGame.css";
-import { Button, Flex } from "@chakra-ui/react";
-import TopPage from "components/TopPage/TopPage";
 import React, { useEffect, useState } from "react";
+
+import { Button, Flex } from "@chakra-ui/react";
+
+import TopPage from "components/TopPage/TopPage";
 import SingleCard from "components/SingleCard/SingleCard";
 import blastoise from "../../images/blastoise.png";
 import gardevoir from "../../images/gardevoir.png";
 import mewtwo from "../../images/mewtwo.png";
 import raichu from "../../images/raichu.png";
 import backCard from "../../images/pokemon-card-back.jpeg";
+
+import "./CardGame.css";
 
 const cardImages = [
   { src: blastoise, matched: false },

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 
-import "./Layout.css";
 import PokemonData from "PokemonData";
+import "./Layout.css";
 
 function Layout({ children }) {
   const { theme } = useContext(PokemonData);
