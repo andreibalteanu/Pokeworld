@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { Button, Flex } from "@chakra-ui/react";
 
-import ErrorPage from "pages/ErrorPage/ErrorPage";
+import ErrorPage from "pages/errorPage/ErrorPage";
 
 import "./Episode.css";
 

@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 
 import { DAEModel } from "react-3d-viewer";
 import { Flex } from "@chakra-ui/react";
-import ErrorPage from "pages/ErrorPage/ErrorPage";
+import ErrorPage from "pages/errorPage/ErrorPage";
 import TopPage from "components/TopPage/TopPage";
 
 import "./PokemonViewer.css";

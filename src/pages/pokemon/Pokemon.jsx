@@ -2,7 +2,7 @@ import { React, useContext } from "react";
 import { useParams } from "react-router-dom";
 
 import TopPage from "components/TopPage/TopPage";
-import ErrorPage from "../ErrorPage/ErrorPage";
+import ErrorPage from "../errorPage/ErrorPage";
 import CardProfile from "../../components/CardProfile/CardProfile";
 import CardDescription from "../../components/CardDescription/CardDescription";
 import CardSprites from "../../components/CardSprites/CardSprites";
