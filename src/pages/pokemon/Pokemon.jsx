@@ -1,6 +1,8 @@
 import { React, useContext } from "react";
 import { useParams } from "react-router-dom";
 
+import { Flex } from "@chakra-ui/react";
+
 import TopPage from "components/TopPage/TopPage";
 import ErrorPage from "../errorPage/ErrorPage";
 import CardProfile from "../../components/CardProfile/CardProfile";
@@ -8,8 +10,6 @@ import CardDescription from "../../components/CardDescription/CardDescription";
 import CardSprites from "../../components/CardSprites/CardSprites";
 // import CardEvolutions from "../../components/CardEvolutions/CardEvolutions";
 import PokemonData from "../../PokemonData";
-
-import "./Pokemon.css";
 
 function Pokemon() {
   const params = useParams();
@@ -22,10 +22,10 @@ function Pokemon() {
     return <ErrorPage />;
   }
   return (
-    <div className="pokemon">
+    <Flex direction="column" align="center" className="pokemon">
       <TopPage path="/pokemon" title="Pokedex" />
 
-      <div className="top-pokemon">
+      <Flex justify="center" align="center" className="top-pokemon">
         <CardProfile
           key={currentPokemon[0].id}
           name={
@@ -46,7 +46,7 @@ function Pokemon() {
           stats={currentPokemon[0].stats}
           games={currentPokemon[0].game_indices}
         />
-      </div>
+      </Flex>
       {/* <CardEvolutions types={currentPokemon[0].types} /> */}
       <CardSprites
         key={currentPokemon[0].id}
@@ -54,7 +54,7 @@ function Pokemon() {
         types={currentPokemon[0].types}
         images={currentPokemon[0].sprites}
       />
-    </div>
+    </Flex>
   );
 }
 

@@ -12,9 +12,9 @@
   width: 100%;
 }
 .app-button {
+  margin: 15px;
   width: 350px;
   height: 80px;
-  margin: 15px;
 }
 .menu-icon {
   margin-right: 10px;

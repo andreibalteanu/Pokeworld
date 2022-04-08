@@ -8,9 +8,9 @@ body {
 }
 
 .index {
+  height: 100vh;
   background-image: url("./images/pokemon-app-background.jpeg");
   background-size: cover;
-  height: 100vh;
 }
 .title-app {
   height: 120px;

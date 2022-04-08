@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Heading } from "@chakra-ui/react";
+import { Flex, Heading } from "@chakra-ui/react";
 
 import "./CardProfile.css";
 
@@ -27,12 +27,12 @@ function CardProfile({ name, id, types, image, weight, height }) {
   };
   return (
     <div className={`card-profile ${types[0].type.name}`}>
-      <div className="top-profile">
+      <Flex justify="space-between" align="center" className="top-profile">
         <div>
           <Heading>{name}</Heading>
           <h3>#{id.toString().padStart(3, "0")}</h3>
         </div>
-        <div className="type-list-profile">
+        <Flex justify="flex-end" className="type-list-profile">
           {types.map((entry) => (
             <h3
               key={entry.slot}
@@ -42,12 +42,12 @@ function CardProfile({ name, id, types, image, weight, height }) {
                 entry.type.name.slice(1)}
             </h3>
           ))}
-        </div>
-      </div>
-      <div className="middle-profile">
+        </Flex>
+      </Flex>
+      <Flex justify="center" className="middle-profile">
         <img className="image-profile" alt="Pokemon" src={image} />
-      </div>
-      <div className="bottom-profile">
+      </Flex>
+      <Flex justify="space-evenly" className="bottom-profile">
         <span>
           <div>Weight</div>
           <div>{convertWeight()} kg</div>
@@ -68,7 +68,7 @@ function CardProfile({ name, id, types, image, weight, height }) {
           <div>Shape</div>
           <div>World</div>
         </span>
-      </div>
+      </Flex>
     </div>
   );
 }

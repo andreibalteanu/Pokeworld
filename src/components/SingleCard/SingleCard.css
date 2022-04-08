@@ -1,6 +1,6 @@
 .card {
-  margin: 10px 10px;
   position: relative;
+  margin: 10px 10px;
   width: 18%;
 }
 .card img {
@@ -13,8 +13,8 @@
 }
 
 .card .front {
-  transform: rotateY(90deg);
   position: absolute;
+  transform: rotateY(90deg);
   transition: all ease-in 0.2s;
 }
 .flipped .front {

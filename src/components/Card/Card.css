@@ -1,12 +1,8 @@
 .card {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: fit-content;
   margin: 20px;
-  padding: 10px 10px;
+  height: fit-content;
   width: 225px;
-
+  padding: 10px 10px;
   border-radius: 20px;
   background-color: white;
 }
@@ -16,9 +12,6 @@
 }
 .top-card,
 .bottom-card {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   height: 50%;
 }
 .card-image {
@@ -30,8 +23,8 @@
 }
 
 .type {
-  width: fit-content;
   margin: 5px;
   border-radius: 10px;
+  width: fit-content;
   padding: 5px 10px;
 }

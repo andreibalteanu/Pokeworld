@@ -1,15 +1,19 @@
 import React from "react";
 
-import { Text } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 
 import "./CardDescription.css";
 
 function CardDescription({ types, stats }) {
   return (
-    <div className="card-description">
-      <div className="title-description">
+    <Flex direction="column" justify="center" className="card-description">
+      <Flex
+        direction="row"
+        justify="space-between"
+        className="title-description"
+      >
         <Text fontSize="2xl">Description</Text>
-      </div>
+      </Flex>
       <div className="top-description">
         <p>
           The diamond shape crystals on its body exper air as cold as -240
@@ -17,7 +21,10 @@ function CardDescription({ types, stats }) {
         </p>
       </div>
       <Text fontSize="2xl">Stats</Text>
-      <div className={`bottom-description ${types[0].type.name}`}>
+      <Flex
+        justify="space-between"
+        className={`bottom-description ${types[0].type.name}`}
+      >
         <div>
           <p>HP</p>
           <p>Attack</p>
@@ -34,8 +41,8 @@ function CardDescription({ types, stats }) {
           <p>{stats[4].base_stat}</p>
           <p>{stats[5].base_stat}</p>
         </div>
-      </div>
-    </div>
+      </Flex>
+    </Flex>
   );
 }
 

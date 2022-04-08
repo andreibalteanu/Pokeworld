@@ -1,27 +1,8 @@
 .card-description {
-  width: 45%;
   margin: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.title-description {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.dropdown-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.dropdown-games {
-  height: 30px;
-  margin-left: 10px;
+  width: 45%;
 }
 .bottom-description {
-  display: flex;
-  justify-content: space-between;
   border-radius: 20px;
   padding: 10px 20px;
 }

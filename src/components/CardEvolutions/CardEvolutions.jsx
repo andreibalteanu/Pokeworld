@@ -1,22 +1,34 @@
 import React from "react";
 
-import { Text } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 
 import "./CardEvolutions.css";
 
 export default function CardEvolutions({ types }) {
   return (
-    <div className={`card-evolution ${types[0].type.name}`}>
+    <Flex
+      direction="column"
+      align="center"
+      className={`card-evolution ${types[0].type.name}`}
+    >
       <Text fontSize="2xl">Evolutions</Text>
-      <div className="card-evolutions-versions">
-        <div className="card-evolutions-item">
+      <Flex
+        direction="row"
+        justify="space-around"
+        className="card-evolutions-versions"
+      >
+        <Flex
+          direction="column"
+          align="center"
+          className="card-evolutions-item"
+        >
           <p>Bulbasaur</p>
           <p>#001</p>
           <img
             alt="Pokemon"
             src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
           />
-        </div>
+        </Flex>
         <div className="card-evolutions-item">
           <p>Ivysaur</p>
           <p>#002</p>
@@ -33,7 +45,7 @@ export default function CardEvolutions({ types }) {
             src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png"
           />
         </div>
-      </div>
-    </div>
+      </Flex>
+    </Flex>
   );
 }

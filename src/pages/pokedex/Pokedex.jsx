@@ -1,6 +1,6 @@
 import { React, useState, useContext } from "react";
 
-import { Button } from "@chakra-ui/react";
+import { Button, Flex } from "@chakra-ui/react";
 
 import TopPage from "components/TopPage/TopPage";
 import Card from "../../components/Card/Card";
@@ -24,7 +24,7 @@ function Pokedex() {
     return false;
   };
   return (
-    <div className="pokedex">
+    <Flex direction="column" align="center" className="pokedex">
       <TopPage path="/" title="Pokedex" />
       <input
         type="text"
@@ -32,7 +32,7 @@ function Pokedex() {
         placeholder="Search pokemon name, number or type..."
         className="search-bar"
       />
-      <div className="container-of-cards">
+      <Flex justify="center" wrap="wrap" className="container-of-cards">
         {pokemonData.map((pokemon) => {
           if (
             pokemon.name.toLowerCase().includes(value) ||
@@ -52,7 +52,7 @@ function Pokedex() {
           }
           return false;
         })}
-      </div>
+      </Flex>
       <Button
         className="addMorePokemons"
         onClick={addMorePokemons}
@@ -60,7 +60,7 @@ function Pokedex() {
       >
         LOAD MORE POKEMONS
       </Button>
-    </div>
+    </Flex>
   );
 }
 
