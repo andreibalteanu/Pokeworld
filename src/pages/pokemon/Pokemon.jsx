@@ -6,7 +6,7 @@ import ErrorPage from "../errorPage/ErrorPage";
 import CardProfile from "../../components/CardProfile/CardProfile";
 import CardDescription from "../../components/CardDescription/CardDescription";
 import CardSprites from "../../components/CardSprites/CardSprites";
-import CardEvolutions from "../../components/CardEvolutions/CardEvolutions";
+// import CardEvolutions from "../../components/CardEvolutions/CardEvolutions";
 import PokemonData from "../../PokemonData";
 
 import "./Pokemon.css";
@@ -47,7 +47,7 @@ function Pokemon() {
           games={currentPokemon[0].game_indices}
         />
       </div>
-      <CardEvolutions types={currentPokemon[0].types} />
+      {/* <CardEvolutions types={currentPokemon[0].types} /> */}
       <CardSprites
         key={currentPokemon[0].id}
         id={currentPokemon[0].id}
