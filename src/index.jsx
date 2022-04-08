@@ -23,7 +23,7 @@ const FlappyMagikarp = lazy(() =>
   import("./pages/flappyMagikarp/FlappyMagikarp")
 );
 const CardGame = lazy(() => import("./pages/cardGame/CardGame"));
-// const ErrorPage = lazy(() => import("./pages/errorPage/ErrorPage"));
+const ErrorPage = lazy(() => import("./pages/errorPage/ErrorPage"));
 const MotionImage = motion(Image);
 
 ReactDOM.render(
@@ -63,7 +63,7 @@ ReactDOM.render(
                   />
                   <Route path="/flappy-magikarp" element={<FlappyMagikarp />} />
                   <Route path="/cardgame" element={<CardGame />} />
-                  {/* <Route path="/*" element={<ErrorPage />} /> */}
+                  <Route path="/*" element={<ErrorPage />} />
                 </Routes>
               </Suspense>
             </Layout>
