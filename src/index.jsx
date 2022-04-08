@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import Layout from "components/Layout/Layout";
 
 import "./index.css";
-import Home from "pages/Home/Home";
+import Home from "pages/home/Home";
 import Pokedex from "pages/Pokedex/Pokedex";
 import Poketv from "pages/Poketv/Poketv";
 import QuizGame from "pages/QuizGame/QuizGame";
