@@ -51,15 +51,10 @@ function FlappyMagikarp() {
       return () => {
         clearInterval(obstacleId);
       };
-
-      // eslint-disable-next-line no-else-return
-    } else {
-      setScore(score + 1);
-      setObstacleLeft(GAME_WIDTH - OBSTACLE_WIDTH);
-      setObstacleHeight(
-        Math.floor(Math.random() * (GAME_HEIGHT - OBSTACLE_GAP))
-      );
     }
+    setScore(score + 1);
+    setObstacleLeft(GAME_WIDTH - OBSTACLE_WIDTH);
+    setObstacleHeight(Math.floor(Math.random() * (GAME_HEIGHT - OBSTACLE_GAP)));
   }, [gameStarted, obstacleLeft]);
 
   useEffect(() => {
