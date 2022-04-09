@@ -55,7 +55,7 @@ function CardGame() {
         );
         resetChoices();
       } else {
-        setTimeout(() => resetChoices(), 800);
+        setTimeout(() => resetChoices(), 500);
       }
     }
   }, [firstChoice, secondChoice]);
