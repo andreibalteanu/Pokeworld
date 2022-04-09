@@ -52,7 +52,8 @@ function FlappyMagikarp() {
         clearInterval(obstacleId);
       };
     }
-    setScore(score + 1);
+    // eslint-disable-next-line no-unused-expressions
+    gameStarted && setScore(score + 1);
     setObstacleLeft(GAME_WIDTH - OBSTACLE_WIDTH);
     setObstacleHeight(Math.floor(Math.random() * (GAME_HEIGHT - OBSTACLE_GAP)));
   }, [gameStarted, obstacleLeft]);
@@ -70,7 +71,6 @@ function FlappyMagikarp() {
       obstacleLeft <= OBSTACLE_WIDTH &&
       (topCollision || bottomCollision)
     ) {
-      setScore(score - 2);
       setGameStarted(false);
     }
   }, [magikarpPosition, obstacleHeight, bottomObstacleHeight, obstacleLeft]);
