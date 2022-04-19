@@ -57,6 +57,7 @@ export function PokemonDataProvider({ children }) {
         url,
         pokemonData,
         addMorePokemons,
+        DEFAULT_LIMIT,
       }}
     >
       {children}

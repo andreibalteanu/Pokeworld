@@ -11,43 +11,44 @@ import "./QuizGame.css";
 const SUCCESS = "success";
 const FAILURE = "failure";
 
-const getOptionsArray = (array) => {
-  if (array.length != 0) {
-    const testOptionsArray = [];
-    const arr = [];
-
-    while (arr.length < 4) {
-      const r = Math.floor(Math.random() * 200) + 1;
-      if (arr.indexOf(r) === -1) arr.push(r);
-    }
-
-    testOptionsArray.push(
-      array[arr[0]],
-      array[arr[1]],
-      array[arr[2]],
-      array[arr[3]]
-    );
-
-    return testOptionsArray;
-  }
-
-  return [];
-};
-
-const generatePokemonGame = (pokemonData) => {
-  const optionsArray = getOptionsArray(pokemonData);
-
-  return {
-    options: shuffle(optionsArray),
-    correct: optionsArray[0],
-    status: null,
-  };
-};
-
 function QuizGame() {
-  const { pokemonData } = useContext(PokemonData);
+  const { pokemonData, DEFAULT_LIMIT } = useContext(PokemonData);
 
   const [game, setGame] = useState({});
+
+  const getOptionsArray = (array) => {
+    if (array.length != 0) {
+      const testOptionsArray = [];
+      const arr = [];
+
+      while (arr.length < 4) {
+        const r = Math.floor(Math.random() * DEFAULT_LIMIT) + 1;
+        if (arr.indexOf(r) === -1) arr.push(r);
+      }
+
+      testOptionsArray.push(
+        array[arr[0]],
+        array[arr[1]],
+        array[arr[2]],
+        array[arr[3]]
+      );
+
+      return testOptionsArray;
+    }
+
+    return [];
+  };
+
+  // eslint-disable-next-line no-shadow
+  const generatePokemonGame = (pokemonData) => {
+    const optionsArray = getOptionsArray(pokemonData);
+
+    return {
+      options: shuffle(optionsArray),
+      correct: optionsArray[0],
+      status: null,
+    };
+  };
 
   useEffect(() => {
     setGame(generatePokemonGame(pokemonData));
