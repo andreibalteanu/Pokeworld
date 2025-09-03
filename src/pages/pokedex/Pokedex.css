@@ -1,9 +1,13 @@
 .search-bar {
   border: 1px solid white;
   border-radius: 10px;
-  width: 315px;
+  width: auto;
   padding: 17px;
   color: black;
+
+  @media (min-width: 768px) {
+    width: 315px;
+  }
 }
 .addMorePokemons {
   margin-bottom: 20px;

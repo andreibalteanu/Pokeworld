@@ -1,0 +1,7 @@
+.top-pokemon {
+  flex-direction: column;
+
+  @media (min-width: 700px) {
+    flex-direction: row;
+  }
+}

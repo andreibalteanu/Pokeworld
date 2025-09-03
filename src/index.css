@@ -21,6 +21,8 @@ body {
 .title-page {
   margin: 20px 0;
   padding-right: 50px;
+  padding-left: 25px;
+  text-align: center;
 }
 .back-arrow {
   margin-top: 30px;

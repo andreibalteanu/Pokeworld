@@ -14,16 +14,16 @@ import "./index.css";
 const Home = lazy(() => import("pages/home/Home"));
 const Pokedex = lazy(() => import("pages/pokedex/Pokedex"));
 const Pokemon = lazy(() => import("pages/pokemon/Pokemon"));
-const Poketv = lazy(() => import("pages/poketv/Poketv"));
-const ViewerOptions = lazy(() => import("pages/viewerOptions/ViewerOptions"));
-const PokemonViewer = lazy(() => import("pages/pokemonViewer/PokemonViewer"));
-const Episodes = lazy(() => import("pages/episodes/Episodes"));
-const QuizGame = lazy(() => import("pages/quizGame/QuizGame"));
+const Poketv = lazy(() => import("pages/Poketv/Poketv"));
+const ViewerOptions = lazy(() => import("pages/ViewerOptions/ViewerOptions"));
+const PokemonViewer = lazy(() => import("pages/PokemonViewer/PokemonViewer"));
+const Episodes = lazy(() => import("pages/Episodes/Episodes"));
+const QuizGame = lazy(() => import("pages/QuizGame/QuizGame"));
 const FlappyMagikarp = lazy(() =>
-  import("pages/flappyMagikarp/FlappyMagikarp")
+  import("pages/FlappyMagikarp/FlappyMagikarp")
 );
-const CardGame = lazy(() => import("pages/cardGame/CardGame"));
-const ErrorPage = lazy(() => import("pages/errorPage/ErrorPage"));
+const CardGame = lazy(() => import("pages/CardGame/CardGame"));
+const ErrorPage = lazy(() => import("pages/ErrorPage/ErrorPage"));
 const MotionImage = motion(Image);
 
 ReactDOM.render(

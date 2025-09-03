@@ -4,12 +4,13 @@ import { useParams } from "react-router-dom";
 import { Flex } from "@chakra-ui/react";
 
 import TopPage from "components/TopPage/TopPage";
-import ErrorPage from "../errorPage/ErrorPage";
+import ErrorPage from "../ErrorPage/ErrorPage";
 import CardProfile from "../../components/CardProfile/CardProfile";
 import CardDescription from "../../components/CardDescription/CardDescription";
 import CardSprites from "../../components/CardSprites/CardSprites";
 // import CardEvolutions from "../../components/CardEvolutions/CardEvolutions";
 import PokemonData from "../../PokemonData";
+import "./Pokemon.css";
 
 function Pokemon() {
   const params = useParams();

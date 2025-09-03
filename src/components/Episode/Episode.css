@@ -1,3 +1,7 @@
 .episode-button {
   margin: 15px;
 }
+
+.episode-frame {
+  width: auto;
+}

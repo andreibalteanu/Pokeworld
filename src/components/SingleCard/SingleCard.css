@@ -1,7 +1,11 @@
 .card {
   position: relative;
   margin: 10px 10px;
-  width: 18%;
+  width: 25%;
+
+  @media (min-width: 530px) {
+    width: 20%;
+  }
 }
 .card img {
   display: block;

@@ -9,7 +9,6 @@ import {
   faTv,
   faQuestion,
   faCube,
-  faGamepad,
   faToggleOn,
   faToggleOff,
   faChessBoard,
@@ -34,10 +33,10 @@ function Home() {
   };
   return (
     <Flex direction="column" align="center" className="home">
-      <Flex justify="space-around" className="top-page menu">
-        <div> </div>
+      <Flex className="top-page menu">
+        <div className="menu-section"> </div>
         <Heading>Menu</Heading>
-        <Flex>
+        <Flex className="menu-section">
           <p className="toggle-label">Change theme</p>
           <FontAwesomeIcon
             icon={toggleStatus ? faToggleOff : faToggleOn}
@@ -52,7 +51,7 @@ function Home() {
         wrap="wrap"
         justifyContent="center"
       >
-        <Link to="/pokemon">
+        <Link className="button-wrapper" to="/pokemon">
           <MotionButton
             initial={initialButtonSize}
             animate={animateButtonSize}
@@ -65,20 +64,7 @@ function Home() {
             POKEDEX
           </MotionButton>
         </Link>
-        <Link to="/poketv">
-          <MotionButton
-            initial={initialButtonSize}
-            animate={animateButtonSize}
-            whileHover={hoverButtonSize}
-            colorScheme="blue"
-            className="app-button"
-            fontSize="20px"
-          >
-            <FontAwesomeIcon icon={faTv} className="menu-icon" />
-            POKETV
-          </MotionButton>
-        </Link>
-        <Link to="/quizgame">
+        <Link className="button-wrapper" to="/quizgame">
           <MotionButton
             initial={initialButtonSize}
             animate={animateButtonSize}
@@ -91,7 +77,20 @@ function Home() {
             GUESS THE POKEMON
           </MotionButton>
         </Link>
-        <Link to="/viewer-options">
+        <Link className="button-wrapper" to="/cardgame">
+          <MotionButton
+            initial={initialButtonSize}
+            animate={animateButtonSize}
+            whileHover={hoverButtonSize}
+            colorScheme="blue"
+            className="app-button"
+            fontSize="20px"
+          >
+            <FontAwesomeIcon icon={faChessBoard} className="menu-icon" />
+            MEMORY CARD GAME
+          </MotionButton>
+        </Link>
+        <Link className="button-wrapper" to="/viewer-options">
           <MotionButton
             initial={initialButtonSize}
             animate={animateButtonSize}
@@ -104,7 +103,7 @@ function Home() {
             POKEMON 3D VIEWER
           </MotionButton>
         </Link>
-        <Link to="/flappy-magikarp">
+        {/* <Link className="button-wrapper" to="/flappy-magikarp">
           <MotionButton
             initial={initialButtonSize}
             animate={animateButtonSize}
@@ -116,8 +115,8 @@ function Home() {
             <FontAwesomeIcon icon={faGamepad} className="menu-icon" />
             FLAPPY MAGIKARP
           </MotionButton>
-        </Link>
-        <Link to="/cardgame">
+        </Link> */}
+        <Link className="button-wrapper" to="/poketv">
           <MotionButton
             initial={initialButtonSize}
             animate={animateButtonSize}
@@ -126,8 +125,8 @@ function Home() {
             className="app-button"
             fontSize="20px"
           >
-            <FontAwesomeIcon icon={faChessBoard} className="menu-icon" />
-            MEMORY CARD GAME
+            <FontAwesomeIcon icon={faTv} className="menu-icon" />
+            POKETV
           </MotionButton>
         </Link>
       </Flex>

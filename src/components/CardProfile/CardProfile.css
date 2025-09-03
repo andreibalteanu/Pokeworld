@@ -1,8 +1,12 @@
 .card-profile {
-  width: 50%;
+  width: 95%;
   margin: 20px;
   border-radius: 20px;
   padding-bottom: 20px;
+
+  @media (min-width: 700px) {
+    width: 50%;
+  }
 }
 .top-profile {
   margin: 0 20px;
@@ -15,6 +19,8 @@
 }
 .type-list-profile {
   width: 30%;
+  position: relative;
+  top: 25px;
 }
 .type-profile {
   margin: 10px;

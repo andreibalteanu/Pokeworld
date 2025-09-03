@@ -1,20 +1,52 @@
 .home {
   height: 100%;
 }
+.menu-section {
+  min-width: 35px;
+
+  @media (min-width: 768px) {
+    min-width: 9.5rem;
+  }
+}
 .menu {
-  margin: 25px 0 25px 140px;
+  margin: 25px 0;
+  justify-content: space-between;
+  padding: 0 2rem;
 }
 .toggle-label {
   margin: 3px 10px 0 0;
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
 }
 
 .container-of-buttons {
   width: 100%;
+
+  @media (min-width: 1200px) {
+    padding: 0 50px;
+  }
+}
+
+.button-wrapper {
+  @media (min-width: 768px) {
+    max-width: fit-content;
+  }
+
+  @media (min-width: 1200px) {
+    width: 40%;
+  }
 }
 .app-button {
-  margin: 15px;
-  width: 350px;
-  height: 80px;
+  margin: 15px 0;
+  min-width: 17rem;
+  min-height: 70px;
+
+  @media (min-width: 768px) {
+    margin: 15px;
+  }
 }
 .menu-icon {
   margin-right: 10px;

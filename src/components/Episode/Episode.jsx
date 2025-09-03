@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { Button, Flex } from "@chakra-ui/react";
 
-import ErrorPage from "pages/errorPage/ErrorPage";
+import ErrorPage from "pages/ErrorPage/ErrorPage";
 
 import "./Episode.css";
 
@@ -45,6 +45,7 @@ function Episode({ series }) {
       {show ? (
         <iframe
           title="naruto"
+          className="episode-frame"
           width="500"
           height="350"
           src={setEpisodeUrl()}
